@@ -1,18 +1,16 @@
 .poste_container{
     display: flex;
     flex-direction: row;
-    position: absolute;
-    left: 26.56%;
-    right: 9.53%;
-    top: 55.19%;
+    flex-grow: 1;
     padding: 17px 25px 17px 28px;
     bottom: 59.86%;
     background: #FFFFFF;
-    width: 818px;
+    width: 715px;
     height: 103px;
     box-shadow: -1px 1px 3px 3px rgba(0, 0, 0, 0.09) ;
     border-radius: 7px;
     justify-content: space-between;
+    margin: 25px;
 
 
 }
