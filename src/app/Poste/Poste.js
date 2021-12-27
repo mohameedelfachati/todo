@@ -1,10 +1,10 @@
 import React from "react";
-import { HistoriqueWrapper } from "../../Historique/Historique.style";
+import { HomeWrapper } from "../../Historique/Historique.style";
 import "./Poste.css";
 
 const Poste = () => {
   return (
-    <HistoriqueWrapper theme={{ top: "320px", left: "370px" }}>
+    <HomeWrapper theme={{ top: "320px", left: "370px" }}>
       <div className="poste_container">
         <div className="text_container">
           <div className="sub_text_container">
@@ -49,7 +49,7 @@ const Poste = () => {
           <button className="button_annuler">Annuler</button>
         </div>
       </div>
-    </HistoriqueWrapper>
+    </HomeWrapper>
   );
 };
 
