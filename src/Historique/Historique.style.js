@@ -23,21 +23,16 @@ export const HistoriqueWrapper = styled.div`
   top: 110px;
 `;
 
-export const NavText = styled.p`
-  position: absolute;
-  width: 65px;
-  height: 19px;
-  left: 159px;
-  top: 10px;
+export const NavText = styled.div`
+  width: 50%;
+  text-align: center;
+  border-bottom: 3px solid ${(props) => (props.boolVal ? "red" : "grey")};
+  color: ${(props) => (props.boolVal ? "red" : "grey")};
+`;
 
-  font-family: Segoe UI;
-  font-style: normal;
-  font-weight: 600;
-  font-size: 14px;
-  line-height: 19px;
-  border-bottom-width: 3px;
-  text-decoration: underline;
-  border-bottom-color: black;
-  padding-bottom: 19px;
-  color: #eb514e;
+export const DeleText = styled.div`
+  width: 50%;
+  text-align: center;
+  border-bottom: 3px solid ${(props) => (!props.boolVal ? "red" : "grey")};
+  color: ${(props) => (!props.boolVal ? "red" : "grey")};
 `;
