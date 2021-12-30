@@ -1,14 +1,19 @@
 import React from "react";
 import AddTodoCm from "../app/AddTodoCm";
 import Poste from "../app/Poste/Poste";
-import { getPosts } from "../Historique/Historique.service";
 import { HomeWrapper } from "../Historique/Historique.style";
 import { useState, useEffect } from "react";
+import axios from "axios";
 
 const Home = () => {
   const [posteInPr, setPosteInPr] = useState([]);
   useEffect(() => {
-    setPosteInPr(getPosts.filter((post) => post.status == "inProgress"));
+    axios
+      .get("http://localhost:8080/test")
+      .then((res) => {
+        setPosteInPr(res.data.filter((post) => post.status == "inProgress"));
+      })
+      .catch((err) => console.log(err));
   }, []);
 
   return (

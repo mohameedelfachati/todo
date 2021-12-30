@@ -1,6 +1,18 @@
 import React from "react";
 import styled from "styled-components";
 
+const getBackGroundColor = (priority) => {
+  switch (priority) {
+    case "important":
+      return "#EB514E";
+    case "medium":
+      return "#39719A";
+    case "urgent":
+      return "red";
+    default:
+      return "#EBBC43";
+  }
+};
 export const HomeWrapper = styled.div`
   position: absolute;
   width: 818px;
@@ -35,4 +47,11 @@ export const DeleText = styled.div`
   text-align: center;
   border-bottom: 3px solid ${(props) => (!props.boolVal ? "red" : "grey")};
   color: ${(props) => (!props.boolVal ? "red" : "grey")};
+`;
+
+export const Priority = styled.div`
+  width: 101.37px;
+  height: 16px;
+  background-color: ${(props) => getBackGroundColor(props.priority)};
+  border-radius: 7px;
 `;

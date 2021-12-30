@@ -1,19 +1,20 @@
 import React from "react";
 import { HomeWrapper } from "../../Historique/Historique.style";
 import "./Poste.css";
+import { Priority } from "../../Historique/Historique.style";
 
 const Poste = ({ posts }) => {
   return (
     <div>
       {posts &&
-        posts.map((post) => (
-          <div className="poste_container">
+        posts.map((post, index) => (
+          <div className="poste_container" key={index}>
             <div className="text_container">
               <div className="sub_text_container">
                 <t2 className="todo">{post.title} </t2>
-                <div className="priority">
+                <Priority priority={post.priority}>
                   <div className="important">{post.priority}</div>
-                </div>
+                </Priority>
               </div>
               <p className="todo_text">{post.details}</p>
             </div>
